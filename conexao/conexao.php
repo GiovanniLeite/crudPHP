@@ -11,4 +11,3 @@
     {
         die("Conexão falhou: " . mysqli_connect_errno() );
     }
-?>

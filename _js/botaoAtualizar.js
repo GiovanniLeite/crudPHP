@@ -1,4 +1,4 @@
-$('#formulario_transportadora').submit(function(e) {
+$('#formulario_transportadora').submit(function (e) {
     e.preventDefault();
     var formulario = $(this);
     var retorno = alterarFormulario(formulario)
@@ -6,25 +6,23 @@ $('#formulario_transportadora').submit(function(e) {
 
 function alterarFormulario(dados) {
     $.ajax({
-        type:"POST",
-        data:dados.serialize(),
-        url:"../_crud/atualizar.php",
-        async:false
-    }).done(function(data){
+        type: "POST",
+        data: dados.serialize(),
+        url: "../_crud/atualizar.php",
+        async: false
+    }).done(function (data) {
         $sucesso = $.parseJSON(data)["sucesso"];
         $mensagem = $.parseJSON(data)["mensagem"];
 
-        if($sucesso)
+        if ($sucesso) {
+            $('#mensagem p').html($mensagem);
+        } else //aq e quando houve uma falha no momento da operacao 
         {
-            $('#mensagem p').html($mensagem);        
+            $('#mensagem p').html($mensagem);
         }
-        else//aq e quando houve uma falha no momento da operacao 
-        {
-            $('#mensagem p').html($mensagem);       
-        }
-    }).fail(function(){//essa falha ele nem conseguiu se comunicar com a pagina atualizar.php
-        $('#mensagem p').html("Erro no sistema, tente mais tarde."); 
-    }).always(function(){
-        $('#mensagem').show(); 
+    }).fail(function () { //essa falha ele nem conseguiu se comunicar com a pagina atualizar.php
+        $('#mensagem p').html("Erro no sistema, tente mais tarde.");
+    }).always(function () {
+        $('#mensagem').show();
     })
 }

@@ -1,36 +1,30 @@
-$('#formulario_transportadora').submit(function(e) {
+$('#formulario_transportadora').submit(function (e) {
     e.preventDefault();
     var formulario = $(this);
     var retorno = inserirFormulario(formulario);
 });
 
-function inserirFormulario(dados)
-{
+function inserirFormulario(dados) {
     $.ajax({
-        type:"POST",
-        data:dados.serialize(),
-        url:"../_crud/inserir.php",
-        async:false
-    }).then(sucesso,falha);
+        type: "POST",
+        data: dados.serialize(),
+        url: "../_crud/inserir.php",
+        async: false
+    }).then(sucesso, falha);
 
-    function sucesso(data)
-    {
+    function sucesso(data) {
         $sucesso = $.parseJSON(data)["sucesso"];
         $mensagem = $.parseJSON(data)["mensagem"];
 
         $('#mensagem').show();
-        if($sucesso)
-        {
+        if ($sucesso) {
             $('#mensagem p').html($mensagem);
-        }
-        else
-        {
+        } else {
             $('#mensagem p').html($mensagem);
         }
     }
 
-    function falha()
-    {
+    function falha() {
         console.log("erro");
     }
 }

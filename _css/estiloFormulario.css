@@ -1,18 +1,18 @@
 main div#janela_formulario {
-    width:860px;
-    margin:50px auto 30px;
-    border:1px solid #333;
+    width: 860px;
+    margin: 50px auto 30px;
+    border: 1px solid #333;
     overflow: hidden;
 }
 
 main div#janela_formulario form {
-    width:470px;
-    margin:10px auto;
+    width: 470px;
+    margin: 10px auto;
 }
 
-main div#janela_formulario form h2  {
+main div#janela_formulario form h2 {
     font-family: sans-serif;
-    color:#333;
+    color: #333;
 }
 
 main div#janela_formulario form p {
@@ -31,13 +31,13 @@ main div#janela_formulario form label {
     font-size: 12px;
     font-weight: 500;
     margin-bottom: 3px;
-    color: #333;    
+    color: #333;
 }
 
 main div#janela_formulario form input[type="text"] {
-    width:350px;
-    padding:10px;
-    border:1px solid #333;
+    width: 350px;
+    padding: 10px;
+    border: 1px solid #333;
     border-radius: 5px;
     outline: none;
     margin-bottom: 25px;
@@ -49,10 +49,10 @@ main div#janela_formulario form select {
 
 main div#janela_formulario form input[type="submit"] {
     display: block;
-    padding:10px 20px;
-    margin-top:15px;
+    padding: 10px 20px;
+    margin-top: 15px;
     color: #FFF;
-    border:0;
+    border: 0;
     border-radius: 5px;
     background-color: #333;
     outline: none;
@@ -61,10 +61,10 @@ main div#janela_formulario form input[type="submit"] {
 
 main div#janela_formulario form input[type="submit"]:hover {
     color: #00c8e0;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
-#voltar{
+#voltar {
     text-decoration: none;
     background-color: #333;
     color: #FFF;
@@ -75,12 +75,12 @@ main div#janela_formulario form input[type="submit"]:hover {
     float: left;
 }
 
-#voltar:hover{
+#voltar:hover {
     color: #00c8e0;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 main div#janela_formulario form #mensagem {
-    margin:10px auto;
+    margin: 10px auto;
     display: none;
 }
